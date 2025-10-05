@@ -90,14 +90,6 @@ Then open in your browser:
 
 ---
 
-##  Contributors
-
-- **KTÜ NeXT Gen Developers Team**  
-- Project Leader: Mert Can Şiran  
-- Fields: Artificial Intelligence, Data Science, Web Development
-
----
-
 ##  Future Plans
 
 -  Integrate more environmental data sources  
@@ -182,7 +174,7 @@ NASA EarthData’dan indirilen `.nc4` veya `.csv` verilerini `/data` klasörüne
 
 ###  Çalıştırma
 ```bash
-python main.py
+uvicorn main:app --reload
 ```
 Tarayıcıdan şu adresi açın:  
 `http://localhost:3000`
@@ -206,14 +198,6 @@ Tarayıcıdan şu adresi açın:
 >  Hava kalitesi orta seviyede.  
 >  Yeşil alan oranı son 5 yılda %4 azaldı.  
 >  *Öneri:* 2030’a kadar sürdürülebilir yeşil alan planlaması yapılmalı.
-
----
-
-##  Geliştirenler
-
-- **KTÜ NeXT Gen Developers Team**  
-- Proje Lideri: Mert Can Şiran  
-- Alan: Yapay Zekâ, Veri Bilimi, Web Geliştirme
 
 ---
 
