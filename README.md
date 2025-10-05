@@ -63,10 +63,10 @@ Place the `.nc4` or `.csv` data files downloaded from NASA EarthData into the `/
 
 ###  Run the Project
 ```bash
-python main.py
+uvicorn main:app --reload
 ```
 Then open in your browser:  
-`http://localhost:3000`
+`http://localhost:8000`
 
 ---
 
