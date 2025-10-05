@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Türkiye Ekolojik Nabız Haritası</title>
+    <link rel="stylesheet" href="/frontend/style.css">
+</head>
+<body>
+
+<header>
+    <strong id="header-title"></strong>
+    <div id="header-desc" style="font-size:12px; color:#bbb"></div>
+    <div style="margin-top:6px; display:flex; justify-content:center; gap:6px; font-size:12px;">
+        <button class="lang-btn active" data-lang="tr">TR</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+    </div>
+    <div class="year-tabs">
+        <div class="year-tab active" data-year="2020">2020</div>
+        <div class="year-tab" data-year="2021">2021</div>
+        <div class="year-tab" data-year="2022">2022</div>
+        <div class="year-tab" data-year="2023">2023</div>
+        <div class="year-tab" data-year="2024">2024</div>
+        <div class="year-tab" data-year="2025">2025</div>
+        <div class="year-tab" data-year="2027">2027</div>
+    </div>
+    <div class="month-tabs"></div>
+</header>
+
+<div class="container">
+    <div id="left-panel">
+        <button id="toggle-left">☰</button>
+        <div class="left-tabs">
+            <div class="left-tab active" data-tab="info"></div>
+            <div class="left-tab" data-tab="ranking"></div>
+        </div>
+        <div id="left-panel-content">
+            <div id="info-tab">
+                <div id="info-header"></div>
+                <div id="info-body" class="note"></div>
+                
+                <div id="forecast-comparison" style="display: none; margin-top: 15px; border-top: 1px solid #223; padding-top: 15px;">
+                    <div id="forecast-header" style="font-weight: bold; color: #5dade2;"></div>
+                    <div id="forecast-text" class="note"></div>
+                </div>
+                
+                <div id="llm-recommendation" style="display: none; margin-top: 15px; border-top: 1px solid #223; padding-top: 15px;">
+                    <div id="llm-analysis-header" style="font-weight: bold; color: #a569bd;"></div>
+                    <p id="llm-general-situation" class="note" style="font-size: 12px; margin: 5px 0 10px 0;"></p>
+
+                    <div id="llm-gov-header" style="font-weight: bold;"></div>
+                    <ul id="llm-gov-strategies" style="font-size: 11px; padding-left: 20px; margin: 5px 0 10px 0; line-height: 1.6;"></ul>
+
+                    <div id="llm-citizen-header" style="font-weight: bold;"></div>
+                    <ul id="llm-citizen-recs" style="font-size: 11px; padding-left: 20px; margin: 5px 0;"></ul>
+                </div>
+            </div>
+            <div id="ranking-tab" style="display:none;">
+                <div id="ranking-title"></div>
+                <table id="ranking-table">
+                    <thead><tr><th></th><th></th><th></th></tr></thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div id="map-wrap">
+        <canvas id="starfield-canvas"></canvas>
+        <svg id="map" viewBox="0 0 800 700" preserveAspectRatio="xMidYMid meet"></svg>
+        <button id="reset-map"></button>
+        <div style="margin-top:10px; text-align:center;">
+            <div class="legend">
+                <div><div class="swatch" style="background:#e74c3c"></div><span id="legend-low"></span></div>
+                <div><div class="swatch" style="background:#f1c40f"></div><span id="legend-mid"></span></div>
+                <div><div class="swatch" style="background:#2ecc71"></div><span id="legend-high"></span></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="controls">
+        <button id="toggle-controls">☰</button>
+        <div id="controls-content">
+            <div><strong id="selected-city-label"></strong> <span id="selected"></span></div>
+            <div id="controls-text" class="note"></div>
+            <div id="heartbeat-container" style="margin-top:12px; display:flex; align-items:center; gap:6px; font-size:16px;">
+                <div id="heart">❤</div><div id="heartbeat-text"></div>
+            </div>
+            <div id="chatbot-container" style="margin-top:20px; border-top:1px solid #333; padding-top:10px;">
+                <button id="toggle-chatbot">💬 Chatbot</button>
+                <div id="chatbot-content" style="display:flex; flex-direction:column; gap:4px; background:#06122a; padding:8px; border-radius:4px; max-height:200px; overflow-y:auto;">
+                    <div id="chatbot-welcome" style="font-size:12px; color:#bbb;"></div>
+                </div>
+                <div id="chatbot-input-container" style="display:flex; gap:4px; margin-top:6px;">
+                    <input type="text" id="chatbot-input" style="flex:1; padding:4px; border-radius:4px; border:none; background:#223; color:#fff;"><button id="chatbot-send"></button>
+                </div>
+                <div id="chatbot-buttons" style="display:flex; flex-wrap:wrap; gap:4px; margin-top:6px;">
+                    <button class="chatbot-btn" data-query="problem"></button><button class="chatbot-btn" data-query="advice"></button>
+                    <button class="chatbot-btn" data-query="greenery"></button><button class="chatbot-btn" data-query="score"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="/frontend/app.js"></script>
+</body>
+</html>

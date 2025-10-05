@@ -1,0 +1,57 @@
+/* frontend/style.css (Düzeltilmiş Hali) */
+body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; padding:0; display:flex; flex-direction:column; height:100vh; background:#030b1a; color:#fff; }
+header { padding:12px 18px; border-bottom:1px solid #223; background:#06122a; display:flex; flex-direction:column; align-items:center; }
+.year-tabs, .month-tabs { display:flex; justify-content:center; gap:8px; flex-wrap:wrap; margin-top:8px;}
+.year-tab, .month-tab { padding:6px 14px; background:#223; border-radius:20px; cursor:pointer; user-select:none; transition: all 0.25s ease; font-size:13px; box-shadow: 0 1px 3px rgba(0,0,0,0.4);}
+.year-tab.active, .month-tab.active { background:#2a3b60; font-weight:bold; transform:scale(1.05);}
+.year-tab:hover, .month-tab:hover { background:#334a7a; transform:translateY(-2px);}
+.legend { display:flex; flex-direction:row; justify-content:center; gap:14px; margin-top:8px; flex-wrap:wrap; font-size:12px;}
+.legend div { display:flex; align-items:center; gap:4px; }
+.container { display:flex; flex:1; gap:12px; padding:12px; transition: all 0.3s; overflow: hidden; }
+#left-panel, #controls { display:flex; flex-direction:column; transition: width 0.3s; background:#06122a; border:1px solid #223; border-radius:6px; padding:12px; box-sizing:border-box; }
+#left-panel { width:300px; min-width:40px; max-width:340px; }
+#left-panel.collapsed { width:40px; padding:12px 6px; overflow:hidden; }
+#controls { width:300px; min-width:40px; max-width:340px; border-left:1px solid #223; position:relative; }
+#controls.collapsed { width:40px; padding:12px 6px; overflow:hidden; }
+#map-wrap { flex:1; display:flex; flex-direction:column; align-items:center; position:relative; }
+#starfield-canvas { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; }
+svg { width:100%; height:100%; max-height:720px; background: transparent; display:block; position: relative; z-index: 1; }
+#left-panel button, #controls button { background:#334a7a; color:#fff; border:none; padding:6px 10px; border-radius:4px; cursor:pointer; margin-bottom:8px; }
+
+/* ----- DÜZELTME BURADA ----- */
+#reset-map {
+    position: absolute;
+    bottom: 45px; /* Konumunu ayarla */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10; /* Haritanın (z-index: 1) üzerinde olmasını garantile */
+    background: #334a7a;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-bottom: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    transition: all 0.2s ease;
+}
+#reset-map:hover {
+    background: #4a6baf;
+}
+/* ----- Bitti ----- */
+
+#left-panel-content, #controls-content { display:flex; flex-direction:column; }
+#left-panel.collapsed #left-panel-content, #controls.collapsed #controls-content { display:none; }
+.swatch { width:22px; height:12px; border-radius:3px; border:1px solid #999; }
+.left-tabs { display:flex; gap:8px; margin-bottom:8px; justify-content:center; }
+.left-tab { padding:4px 8px; background:#223; border-radius:4px; cursor:pointer; transition: background 0.3s; }
+.left-tab.active { background:#2a3b60; font-weight:bold; }
+table { width:100%; border-collapse: collapse; margin-top:6px; }
+th, td { padding:4px 6px; border-bottom:1px solid #333; text-align:left; font-size:13px; }
+@keyframes heartbeat {0%,100%{transform:scale(1);}25%{transform:scale(1.3);}50%{transform:scale(1);}75%{transform:scale(1.3);}}
+#heart { transform-origin: center center; font-size:24px; color:red; }
+.lang-btn { background:#223; color:#fff; border:none; border-radius:4px; padding:2px 6px; cursor:pointer; transition:0.2s;}
+.lang-btn.active { background:#2a3b60; font-weight:bold;}
+.chatbot-btn { background: #1a2842; color: #a0b0d0; border: 1px solid #334a7a; border-radius: 4px; padding: 3px 7px; font-size: 11px; cursor: pointer; transition: 0.2s;}
+.chatbot-btn:hover { background: #334a7a; color: #fff;}
+path.selected { stroke: #ffffff; stroke-width: 1.5px !important; /* Önemli: D3'ün üzerine yazsın */ }
