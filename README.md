@@ -228,3 +228,15 @@ NASA Space Apps jürisi ve çevresel veri topluluğuna teşekkürler!
 ---
 
 **EcoPulse — “Dünyanın Nabzını Dinle, Geleceği Şekillendir.” **
+
+---
+## Takım
+
+Bu projeyi geliştirenler:
+
+- **[Emir Güçlü](https://github.com/emir-guclu)**
+- **[Mert Can Şiran](https://github.com/Mertcansrn)**
+- **[Ömer Burak Fıstıkçı](https://github.com/burakfstkc)**
+- **[Beren Tükenmez](https://github.com/Tukenmezz)**
+- **[Gökçe Polat]()**
+- **[Emin Duran]()**
