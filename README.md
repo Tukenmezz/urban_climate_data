@@ -108,7 +108,18 @@ Thanks to the NASA Space Apps jury and the environmental data community!
 **EcoPulse — “Listen to the Earth’s Pulse, Shape the Future.” **
 
 ---
+## The Team
 
+This project was developed by:
+
+- **[Emir Güçlü](https://github.com/emir-guclu)**
+- **[Mert Can Şiran](https://github.com/Mertcansrn)**
+- **[Ömer Burak Fıstıkçı](https://github.com/burakfstkc)**
+- **[Beren Tükenmez](https://github.com/Tukenmezz)**
+- **[Gökçe Polat]()**
+- **[Emin Duran]()**
+
+---
 #  EcoPulse — Türkiye'nin Ekolojik Nabzını Tutuyoruz
 
 **EcoPulse**, NASA EarthData kaynaklarından alınan çevresel verileri analiz ederek Türkiye’deki şehirlerin “ekolojik nabzını” hesaplayan ve geleceğe yönelik çevresel tahminler sunan bir yapay zekâ projesidir.  
